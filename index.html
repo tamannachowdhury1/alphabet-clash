@@ -17,15 +17,15 @@
 <body class="font-poppins">
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- Home screen -->
-        <section class="home text-white min-h-screen flex  justify-center items-center hidden">
+        <section id="home" class="text-white min-h-screen flex  justify-center items-center  ">
             <div class="flex flex-col items-center gap-10">
                 <h1 class="text-8xl font-anton uppercase">Alpha Clash Pro</h1>
                 <p>Unleash Your keyboard Kun g Fu : press "Enter" tp play </p>
-                <button class="btn bg-white text-black">Play Now</button>
+                <button onclick="play()" class="btn bg-white text-black">Play Now</button>
             </div>
         </section>
         <!-- play ground -->
-        <section class="play-ground hidden">
+        <section id="play-ground" class="hidden">
             <div class="flex flex-col items-center gap-20 pt-20">
                 <!-- screen start -->
                 <div
@@ -35,48 +35,45 @@
                         <p class="bg-[#2F2941] px-6 pb-4 rounded-b -2xl">Don't Watch keyboard while playing...</p>
                     </div>
                     <div class="flex justify-center items-center h-full">
-                        <p class="text-9xl text-black font-bold">Y</p>
+                        <p id="current-alphabet" class="text-9xl text-black font-bold   uppercase">Y</p>
                     </div>
                 </div>
                 <!-- screen end -->
-
-
                 <!-- key board start -->
                 <div class="flex flex-col gap-[0.5]">
                     <div class="my-1 flex w-full justify-center gap-2">
-                        <kbd
-                            class="kbd text-black font-medium text-xl  text-black font-medium text-xl bg-white px-5 py-3">q</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white   px-5 py-3">w</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white  px-5 py-3">e</kbd>
-
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">r</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">t</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-[#FFA500] px-5 py-3">y</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">u</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">i</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">o</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">p</kbd>
+                        <kbd id="q"
+                            class="kbd text-black font-medium text-xl font-medium text-xl bg-white px-5 py-3">q</kbd>
+                        <kbd id="w" class="kbd text-black font-medium text-xl bg-white   px-5 py-3">w</kbd>
+                        <kbd id="e" class="kbd text-black font-medium text-xl bg-white  px-5 py-3">e</kbd>
+                        <kbd id="r" class="kbd text-black font-medium text-xl bg-white px-5 py-3">r</kbd>
+                        <kbd id="t" class="kbd text-black font-medium text-xl bg-white px-5 py-3">t</kbd>
+                        <kbd id="y" class="kbd text-black font-medium text-xl bg-white px-5 py-3">y</kbd>
+                        <kbd id="u" class="kbd text-black font-medium text-xl bg-white px-5 py-3">u</kbd>
+                        <kbd id="i" class="kbd text-black font-medium text-xl bg-white px-5 py-3">i</kbd>
+                        <kbd id="o" class="kbd text-black font-medium text-xl bg-white px-5 py-3">o</kbd>
+                        <kbd id="p" class="kbd text-black font-medium text-xl bg-white px-5 py-3">p</kbd>
                     </div>
                     <div class="my-1 flex w-full justify-center gap-2">
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">a</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">s</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">d</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">f</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">g</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">h</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">j</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">k</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">l</kbd>
+                        <kbd id="a" class="kbd text-black font-medium text-xl bg-white px-5 py-3">a</kbd>
+                        <kbd id="s" class="kbd text-black font-medium text-xl bg-white px-5 py-3">s</kbd>
+                        <kbd id="d" class="kbd text-black font-medium text-xl bg-white px-5 py-3">d</kbd>
+                        <kbd id="f" class="kbd text-black font-medium text-xl bg-white px-5 py-3">f</kbd>
+                        <kbd id="g" class="kbd text-black font-medium text-xl bg-white px-5 py-3">g</kbd>
+                        <kbd id="h" class="kbd text-black font-medium text-xl bg-white px-5 py-3">h</kbd>
+                        <kbd id="j" class="kbd text-black font-medium text-xl bg-white px-5 py-3">j</kbd>
+                        <kbd id="k" class="kbd text-black font-medium text-xl bg-white px-5 py-3">k</kbd>
+                        <kbd id="l" class="kbd text-black font-medium text-xl bg-white px-5 py-3">l</kbd>
                     </div>
                     <div class="my-1 flex w-full justify-center gap-2">
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">z</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">x</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">c</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">v</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">b</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">n</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">m</kbd>
-                        <kbd class="kbd text-black font-medium text-xl bg-white px-5 py-3">/</kbd>
+                        <kbd id="z" class="kbd text-black font-medium text-xl bg-white px-5 py-3">z</kbd>
+                        <kbd id="x" class="kbd text-black font-medium text-xl bg-white px-5 py-3">x</kbd>
+                        <kbd id="c" class="kbd text-black font-medium text-xl bg-white px-5 py-3">c</kbd>
+                        <kbd id="v" class="kbd text-black font-medium text-xl bg-white px-5 py-3">v</kbd>
+                        <kbd id="b" class="kbd text-black font-medium text-xl bg-white px-5 py-3">b</kbd>
+                        <kbd id="n" class="kbd text-black font-medium text-xl bg-white px-5 py-3">n</kbd>
+                        <kbd id="m" class="kbd text-black font-medium text-xl bg-white px-5 py-3">m</kbd>
+                        <kbd id="/" class="kbd text-black font-medium text-xl bg-white px-5 py-3">/</kbd>
                     </div>
                 </div>
                 <!-- key board end -->
@@ -85,24 +82,28 @@
                     <button class="btn rounded-full bg-purple-300 text-white px-4">
                         Life
                         <img src="images/Group 23.svg" alt="" srcset="">
-                        <span>1</span>
+                        <span id="current-life">5</span>
                     </button>
                     <button class="btn rounded-full bg-blue-900 text-white px-4">
                         score
                         <img src="images/monetization_on.svg" alt="" srcset="">
-                        <span>1</span>
+                        <span id="current-score">0</span>
                     </button>
                 </div>
             </div>
         </section>
-        <section class="score flex justify-center items-center min-h-screen">
+        <section id="score" class=" flex justify-center items-center min-h-screen hidden">
             <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
-                <h1 class="text-8xl"><span class="font-extrabold">Score:</span><span>14</span></h1>
-                <button class="btn">play Again</button>
+                <h4 class="text-3xl">Game Over !</h4>
+                <h1 class="text-8xl"><span class="font-extrabold">Score:</span><span id="game-score">14</span></h1>
+                <button onclick="play()" class="btn">play Again</button>
                 <p>Practice will make you a Pro</p>
             </div>
         </section>
     </main>
+    <script src="alpha-clash.js"></script>
+    <script src="utility.js"></script>
+    <script src="recape.js"></script>
 </body>
 
 </html>
